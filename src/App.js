@@ -1,8 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 
-const test = '132'; 
-
 let request = require('request');
 let cheerio = require('cheerio');
  
