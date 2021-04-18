@@ -6,7 +6,7 @@ let cheerio = require('cheerio');
  
 const $url = 'http://openapi.gbis.go.kr/ws/rest/busarrivalservice/station';
 
-const $key ='R2DQ7bRdwI0Eet9NTN825ucrDez%2FWkBqCG2CpqZFvQRxRZGYGFmBNftY%2Bvb56uQ%2Bqs%2BehP31AHkzr7YMMcVR3g%3D%3D';
+const $key = API_KEY;
 
 const $station = '233001450';
 
