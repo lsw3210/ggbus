@@ -1,27 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'
+import Contents from './components/Contents'
 
-let request = require('request');
-let cheerio = require('cheerio');
- 
-const $url = 'http://openapi.gbis.go.kr/ws/rest/busarrivalservice/station';
-
-const $key = API_KEY;
-
-const $station = '233001450';
-
-const $api_url = $url + '?serviceKey=' + $key + '&stationId=' + $station;
-
-console.log($api_url);
-
-request($api_url, function(err, res, body) {
-  $ = cheerio.load(body);
-
-  $('busArrivalList').each(function(idx){
-    let no1 = $(this).find('plateNo1').text();
-    let no2 = $(this).find('plateNo2').text();
-    console.log(`도착 예정 버스: ${no1}, 다음 도착 버스: ${no2 ? no2 : '---'}`);
-  });
-});
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <Contents />
+    </div>
+  );
+}
 
 export default App;
